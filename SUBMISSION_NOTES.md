@@ -49,7 +49,7 @@ passed cleanly. Caught by actually deploying and integration-testing against rea
 infrastructure -- not by source review alone -- and fixed with ASCII-only substitutes carrying
 the identical defense. Full detail in `CONTRACT_STATUS.md`.
 
-Live app: (add once deployed)
+Live app: https://aura-protocol-liart.vercel.app
 Source: https://github.com/Hilda26/Aura-Protocol
 Contract (StudioNet, current): 0x4F9556cB8a5E720B822De216e77254ec8d7F2b7E
 Full design rationale: DECISION_RECORD.md

@@ -2,7 +2,7 @@
 
 **Freelance delivery-cadence agreements, continuously re-judged by GenLayer live-web consensus -- not resolved once and left to die.**
 
-**Live app:** (deploy and add link here)
+**Live app:** https://aura-protocol-liart.vercel.app
 **Contract (StudioNet):** [`0x4F9556cB8a5E720B822De216e77254ec8d7F2b7E`](https://explorer-studio.genlayer.com/address/0x4F9556cB8a5E720B822De216e77254ec8d7F2b7E)
 **Source:** this repo (`contracts/Aura.py`)
 
