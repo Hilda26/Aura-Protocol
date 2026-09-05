@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #05040A;
+  color: #EDE9FE;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.4);
+  color: #fff;
+}
+
+* {
+  scrollbar-color: rgba(167, 139, 250, 0.4) transparent;
+  scrollbar-width: thin;
+}
+
+a {
+  color: inherit;
+}
+
+.text-glow {
+  text-shadow: 0 0 24px rgba(139, 92, 246, 0.45);
+}
