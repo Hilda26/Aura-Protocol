@@ -63,10 +63,16 @@ def test_live_walkthrough_on_deployed_contract():
     contract_client = factory.build_contract(contract_address=CONTRACT_ADDRESS, account=client)
     _pace()
 
-    payment = 500
-    total_intervals = 6
-    bond = 100
-    strike_threshold = 3
+    # Amounts are denominated in GEN, not raw wei. An earlier run used 500
+    # wei per interval, which is dust: the app then displayed a meaningless
+    # figure for every escrow, bond and payment on the flagship agreement.
+    # 0.01 GEN per interval over 6 intervals escrows 0.06 GEN, and a 0.005
+    # GEN bond against a 3-strike threshold posts 0.015 GEN -- the exact
+    # worst case the contract can ever slash.
+    payment = 10 ** 16       # 0.01 GEN per interval
+    total_intervals = 6      # -> 0.06 GEN escrowed
+    bond = 5 * 10 ** 15      # 0.005 GEN per interval
+    strike_threshold = 3     # -> 0.015 GEN bonded
     interval_seconds = 7 * 24 * 3600  # weekly cadence
 
     tx = _with_retry(
